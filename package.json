@@ -14,7 +14,8 @@
     "node": ">=4"
   },
   "files": [
-    "solat.js"
+    "solat.js",
+    "zones.json"
   ],
   "keywords": [
     "cli-app",
