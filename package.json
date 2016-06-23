@@ -1,6 +1,6 @@
 {
   "name": "solat",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Waktu solat di terminal anda",
   "license": "MIT",
   "bin": "solat.js",
@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "chalk": "^1.1.3",
+    "cli-table2": "^0.2.0",
     "commander": "^2.9.0",
     "request": "^2.72.0",
     "xml2js": "^0.4.16"
