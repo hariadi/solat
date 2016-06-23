@@ -14,7 +14,7 @@
     "node": ">=4"
   },
   "files": [
-    "solat.js",
+    "solat.js"
   ],
   "keywords": [
     "cli-app",
