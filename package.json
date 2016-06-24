@@ -1,6 +1,6 @@
 {
   "name": "solat",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Waktu solat di terminal anda",
   "license": "MIT",
   "bin": "solat.js",

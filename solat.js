@@ -10,14 +10,19 @@ const chalk = require('chalk')
 
 let solat = (zone = 'SGR04')  => {
 
-    var location = zones[zone];
+    var location = zones[zone], yellow = chalk.yellow;
 
-    if (!location) {
+    if (typeof location === 'undefined') {
         for(var key in zones){
-            if (zones[key].zone.toLowerCase().indexOf(zone) > -1) {
+            if (zones[key].zone.toLowerCase().indexOf(zone.toLowerCase()) > -1) {
                 location = zones[key];
             }
         }
+    }
+
+    if (typeof location === 'undefined') {
+       console.error(chalk.yellow.bgRed.bold('\n  Err: zone or location not found!\n'));
+       process.exit(1);
     }
 
     let cmd = 'curl www2.e-solat.gov.my/xml/today/?zon=' + location.code;
@@ -25,6 +30,7 @@ let solat = (zone = 'SGR04')  => {
     console.log([
         '',
         chalk.yellow('  Negeri: ') + location.state,
+        chalk.yellow('  Kod: ') + location.code,
         chalk.yellow('  Zon: ') + location.zone,
         '',
     ].join('\n'));
